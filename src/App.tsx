@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import LoginForm from "./containers/LoginForm";
+import { Container, Grid } from "@mui/material";
+import ToastManager from "./containers/ToastManager";
+import { useAppSelector } from "./hooks/state.hooks";
+import LogoutButton from "./containers/LogoutButton";
 
 function App() {
+  const { data } = useAppSelector((state) => state.users);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <Container>
+        <Grid
+          container
+          style={{ height: "100vh" }}
+          justifyContent="center"
+          alignItems="center"
         >
-          Learn React
-        </a>
-      </header>
+          <Grid item xs={12} md={4}>
+            { data?.token ? <LogoutButton /> : <LoginForm /> }
+            
+          </Grid>
+        </Grid>
+      </Container>
+      <ToastManager />
     </div>
   );
 }
