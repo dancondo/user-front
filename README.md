@@ -2,6 +2,51 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Folder structure
+
+In this project you can find the following folders
+
+- [src/components](src/components/)
+    - The application components.
+    - Each component has its own folder, containing the component itself and the unit tests.
+- [src/containers](src/containers/)
+    - The application containers
+    - they are different from components because they are connected to the redux global state.
+    - Each container has its own folder, containing the container itself and the unit tests.
+- [src/hooks](src/hooks)
+    - The application custom hooks
+- [src/services](src/services)
+    - The application services.
+    - API calls implementation.
+- [src/store](src/store)
+    - The application global state logic.
+    - Redux related files.
+- [src/types](src/types)
+    - The application types.
+- [src/utils](src/utils)
+    - The application helper functions.
+
+## How to Run
+
+You'll need to have [node](https://nodejs.org/en/download) installed.
+
+* **Install dependencies**
+
+```bash
+$ npm install
+```
+
+* **Setup envroinment files**
+
+Copy the content of .env.exemple to a new file named .env.
+If you happen to use the backend in another port, host or different protocol, please alter the REACT_APP_USERS_API_BASE_URL value.
+
+* **Start the application**
+
+```bash
+$ npm start
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
