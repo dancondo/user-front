@@ -1,8 +1,13 @@
-# User Front
+# Users Front
+> This is a simple users api with authentication module.
+> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Users Front](#users-api)
+  - [Folder Structure](#folder-structure)
+  - [How to Run](#how-to-run)
+  - [Other Scripts](#other-scripts)
 
-## Folder structure
+## Folder Structure
 
 In this project you can find the following folders
 
